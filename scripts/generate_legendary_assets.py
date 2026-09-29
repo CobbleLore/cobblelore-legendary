@@ -280,7 +280,19 @@ def write_catalog_json() -> None:
     )
 
 
+def sync_catalog_from_disk() -> None:
+    """Use legendary_items.json as source of truth (do not resurrect removed items)."""
+    global LEGENDARY_IDS, ITEM_TO_SPECIES
+    path = RES / "cobblelore/legendary_items.json"
+    if not path.exists():
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    LEGENDARY_IDS = data["items"]
+    ITEM_TO_SPECIES = data["item_to_species"]
+
+
 def main() -> None:
+    sync_catalog_from_disk()
     extract_textures()
     myths = load_myths_pools()
     generate_spawn_pools(myths)
