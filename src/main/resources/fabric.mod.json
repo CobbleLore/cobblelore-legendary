@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblelore_legendary",
+  "version": "${version}",
+  "name": "CobbleLore Legendary",
+  "description": "Legendary key items (cobblelore namespace) for Myths and Legends and Legendary Monuments.",
+  "authors": ["CobbleLore"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.cobblelore.legendary.CobbleLoreLegendaryMod"],
+    "client": ["com.cobblelore.legendary.CobbleLoreLegendaryClient"]
+  },
+  "mixins": ["cobblelore-legendary.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.1",
+    "fabric-api": "*",
+    "cobblemon": "*",
+    "mythsandlegends": "*"
+  },
+  "suggests": {
+    "legendarymonuments": "*"
+  }
+}

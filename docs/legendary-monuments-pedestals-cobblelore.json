@@ -1,0 +1,37 @@
+{
+  "pedestals": {
+    "_comment": "Copy into config/LegendaryMonuments/config.json under \"pedestals\". Values use cobblelore key items.",
+    "enteiPedestalItem": "cobblelore:sacred_flame",
+    "raikouPedestalItem": "cobblelore:sacred_lightning",
+    "suicunePedestalItem": "cobblelore:sacred_droplet",
+    "heatranPedestalItem": "cobblelore:magma_chunk",
+    "hoohPedestalItem": "cobblelore:rainbow_wing",
+    "latiasPedestalItem": "cobblelore:red_eon_ticket",
+    "latiosPedestalItem": "cobblelore:blue_eon_ticket",
+    "lugiaPedestalItem": "cobblelore:silver_wing",
+    "regicePedestalItem": "cobblelore:never_melt_icicle",
+    "regirockPedestalItem": "cobblelore:ancient_ingot",
+    "registeelPedestalItem": "cobblelore:steel_alloy",
+    "regigigasPedestalItem": "cobblelore:titan_totem",
+    "regielekiPedestalItem": "cobblelore:infinite_source",
+    "regidragoPedestalItem": "cobblelore:dragon_skull",
+    "hoopaPedestalFirstItem": "cobblelore:ring",
+    "hoopaPedestalSecondItem": "mega_showdown:prison_bottle",
+    "zekromPedestalFirstItem": "cobblelore:dark_stone",
+    "zekromPedestalSecondItem": "cobblemon:electric_gem",
+    "reshiramPedestalFirstItem": "cobblelore:light_stone",
+    "reshiramPedestalSecondItem": "cobblemon:fire_gem",
+    "kyuremPedestalFirstItem": "cobblelore:gray_stone",
+    "kyuremPedestalSecondItem": "cobblelore:gray_stone",
+    "zacianPedestalFirstItem": "minecraft:totem_of_undying",
+    "zacianPedestalSecondItem": "cobblelore:rusted_sword",
+    "zamazentaPedestalFirstItem": "minecraft:totem_of_undying",
+    "zamazentaPedestalSecondItem": "cobblelore:rusted_shield"
+  },
+  "hardcoded_pedestals_note": {
+    "mew": "Uses ModItems old_sea_map — set via structure Final Island; map cobblelore:rare_sea_egg in LM config if extended",
+    "dialga_palkia": "Uses red_chain in LM code — consider cobblelore:adamant_orb / lustrous_orb via future LM config hooks",
+    "giratina": "Uses mega_showdown:griseous_orb — map to cobblelore:griseous_orb in server config when LM allows",
+    "steed_calyrex": "cobblelore:frozen_hoof / ghostly_hoof"
+  }
+}
