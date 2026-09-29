@@ -83,7 +83,7 @@
 | `psychic_orb` | latias | Monument (pedestal) uniquement |
 | `combat_orb` | latios | Monument (pedestal) uniquement |
 | `ruinous_sword` | chienpao | Spawn monde (item + biomes) |
-| `ruinous_beads` | chiiyu | Spawn monde (item + biomes) |
+| `ruinous_beads` | chiyu | — |
 | `ruinous_tablet` | wochien | Spawn monde (item + biomes) |
 | `ruinous_vessel` | tinglu | Spawn monde (item + biomes) |
 | `zeraora_tuft` | zeraora | Spawn monde (item + biomes) |

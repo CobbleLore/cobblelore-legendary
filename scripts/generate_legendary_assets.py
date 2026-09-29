@@ -121,7 +121,7 @@ ITEM_TO_SPECIES: dict[str, str] = {
     "combat_orb": "latios",
     "dark_orb": "darkrai",
     "ruinous_sword": "chienpao",
-    "ruinous_beads": "chiiyu",
+    "ruinous_beads": "chiyu",
     "ruinous_tablet": "wochien",
     "ruinous_vessel": "tinglu",
     "zeraora_tuft": "zeraora",

@@ -5,7 +5,7 @@ Référence : tags **`legendary` / `mythical` / `ultra_beast`** dans le JAR Cobb
 **Cobblelore aujourd’hui :** **86** espèces (catalogue Delta/Academy).  
 **Manque pour couvrir les 105 :** **19** espèces (voir ci‑dessous).
 
-> **Note technique :** le pool `cobblelore-chiiyu.json` utilise l’id `chiiyu` ; Cobblemon attend **`chiyu`**. À corriger séparément (pas un “oubli” de contenu).
+> **Chi-Yu :** l’espèce Cobblemon est **`chiyu`** (fichier `cobblelore-chiyu.json`, item `ruinous_beads`).
 
 ---
 
@@ -62,7 +62,7 @@ Toutes tag **`ultra_beast`** en 1.8.1. Aucune dans Delta gimmick / Cobblelore ac
 
 ## Ordre d’implémentation suggéré
 
-1. Fix **`chiiyu` → `chiyu`** dans `legendary_items.json` + pool.  
+1. ~~Fix **`chiiyu` → `chiyu`**~~ (fait).  
 2. **Meloetta, Marshadow, Calyrex, Urshifu** (impact joueur visible).  
 3. **Melmetal** (lien **`meltan_nut`** / quête).  
 4. **Type:Null** si tu veux la chaîne avant Silvally.  
