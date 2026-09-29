@@ -6,8 +6,8 @@
     "suicunePedestalItem": "cobblelore:sacred_droplet",
     "heatranPedestalItem": "cobblelore:magma_chunk",
     "hoohPedestalItem": "cobblelore:rainbow_wing",
-    "latiasPedestalItem": "cobblelore:red_eon_ticket",
-    "latiosPedestalItem": "cobblelore:blue_eon_ticket",
+    "latiasPedestalItem": "cobblelore:psychic_orb",
+    "latiosPedestalItem": "cobblelore:combat_orb",
     "lugiaPedestalItem": "cobblelore:silver_wing",
     "regicePedestalItem": "cobblelore:never_melt_icicle",
     "regirockPedestalItem": "cobblelore:ancient_ingot",
@@ -29,7 +29,7 @@
     "zamazentaPedestalSecondItem": "cobblelore:rusted_shield"
   },
   "hardcoded_pedestals_note": {
-    "mew": "Uses ModItems old_sea_map — set via structure Final Island; map cobblelore:rare_sea_egg in LM config if extended",
+    "mew": "LM code may expect old_sea_map — loot odd_sea_egg for Final Island / pedestal flow; verify in game",
     "dialga_palkia": "Uses red_chain in LM code — consider cobblelore:adamant_orb / lustrous_orb via future LM config hooks",
     "giratina": "Uses mega_showdown:griseous_orb — map to cobblelore:griseous_orb in server config when LM allows",
     "steed_calyrex": "cobblelore:frozen_hoof / ghostly_hoof"

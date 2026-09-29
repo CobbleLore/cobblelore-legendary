@@ -1,12 +1,5 @@
 # cobblelore-legendary
 
-<<<<<<< HEAD
-Mod Fabric 1.21.1 visant à enregistrer les items légendaires (catalogue Cobblemon Academy / Delta Client) et à les brancher sur les spawns **Myths and Legends**.
-
-## Documentation
-
-- [Analyse complète des mods source](docs/ANALYSE-MODS.md)
-=======
 Mod Fabric **1.21.1** : items légendaires `cobblelore:*` (catalogue Delta/Academy), intégration **Myths and Legends** (key items + spawn pools) et doc/config pour **Legendary Monuments** (pedestals).
 
 ## Stack serveur / client
@@ -51,5 +44,5 @@ python3 scripts/generate_legendary_assets.py
 
 ## Documentation
 
-- [Analyse mods source](docs/ANALYSE-MODS.md)
->>>>>>> origin/cursor/cobblelore-legendary-mod-d035
+- [Analyse complète des mods source](docs/ANALYSE-MODS.md)
+- [Alignement pack CobbleLore](docs/COMPAT-PACK-COBBLELORE.md)
