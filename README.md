@@ -21,10 +21,12 @@ Pour compiler Legendary Monuments en compile-only, placez le JAR dans `libs/` (v
 
 ## Gameplay visé
 
-1. Obtenir un item `cobblelore:<id>`.
-2. Localiser le monument (Arc Phone / LM).
-3. Placer l’item sur le **pedestal** LM (config serveur).
-4. Myths and Legends gère aussi les spawns `ultra-rare` si le joueur a le key item (pools `data/cobblemon/spawn_pool_world/cobblelore-*.json`).
+**Une seule voie par légendaire** (voir [`docs/TABLEAU-ITEMS-LEGENDAIRES.md`](docs/TABLEAU-ITEMS-LEGENDAIRES.md)) :
+
+1. **Pedestal Legendary Monuments** (~20 espèces) → monument + item CobbleLore, **pas** de spawn monde.
+2. **Tous les autres** (~66) → item en inventaire + biomes (Myths and Legends), **pas** de pedestal LM.
+
+Exemple config LM : [`docs/legendary-monuments-pedestals-cobblelore.json`](docs/legendary-monuments-pedestals-cobblelore.json).
 
 ## Config Legendary Monuments
 

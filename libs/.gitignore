@@ -1,2 +1,2 @@
-# Local mod JARs for compilation (runtime: install same mods in mods folder).
-!*.jar
+# Local mod JARs for compile-only (do not commit).
+*.jar

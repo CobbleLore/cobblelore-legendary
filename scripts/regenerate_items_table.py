@@ -10,19 +10,31 @@ ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / "src/main/resources"
 DOCS = ROOT / "docs"
 
-MONUMENT_ONLY = {
-    "dialga": "adamant_orb",
-    "mew": "odd_sea_egg",
-    "latias": "psychic_orb",
-    "latios": "combat_orb",
-    "zacian": "rusted_sword",
-}
-
-LM_PED = {
-    "mew", "dialga", "palkia", "giratina", "glastrier", "spectrier", "latias", "latios",
-    "entei", "raikou", "suicune", "heatran", "hooh", "lugia", "hoopa", "zekrom", "reshiram",
-    "kyurem", "zacian", "zamazenta",
-}
+# Legendary Monuments 8.1 — espèces avec pedestal dédié (priorité sur spawn monde).
+LM_PEDESTAL_SPECIES = frozenset(
+    {
+        "mew",
+        "dialga",
+        "palkia",
+        "giratina",
+        "glastrier",
+        "spectrier",
+        "latias",
+        "latios",
+        "entei",
+        "raikou",
+        "suicune",
+        "heatran",
+        "hooh",
+        "lugia",
+        "hoopa",
+        "zekrom",
+        "reshiram",
+        "kyurem",
+        "zacian",
+        "zamazenta",
+    }
+)
 
 
 def load_catalog() -> tuple[list[str], dict[str, str]]:
@@ -33,6 +45,8 @@ def load_catalog() -> tuple[list[str], dict[str, str]]:
 def load_spawn_keys() -> dict[str, set[str]]:
     species_keys: dict[str, set[str]] = defaultdict(set)
     pool_dir = RES / "data/cobblemon/spawn_pool_world"
+    if not pool_dir.exists():
+        return species_keys
     for f in pool_dir.glob("cobblelore-*.json"):
         sp = f.stem.replace("cobblelore-", "")
         j = json.loads(f.read_text(encoding="utf-8"))
@@ -44,45 +58,40 @@ def load_spawn_keys() -> dict[str, set[str]]:
 
 
 def describe_use(item: str, sp: str, species_keys: dict[str, set[str]]) -> str:
-    if MONUMENT_ONLY.get(sp) == item:
+    if sp in LM_PEDESTAL_SPECIES:
         return "Monument (pedestal) uniquement"
-    in_pool = item in species_keys.get(sp, set())
-    parts: list[str] = []
-    if in_pool:
-        parts.append("Spawn monde")
-    if sp in LM_PED and sp not in MONUMENT_ONLY:
-        parts.append("Monument (pedestal)")
-    return " · ".join(parts) if parts else "—"
+    if item in species_keys.get(sp, set()):
+        return "Spawn monde (item + biomes)"
+    return "—"
 
 
 def main() -> None:
     items_order, item_to_species = load_catalog()
     species_keys = load_spawn_keys()
-    by_species: dict[str, list[str]] = defaultdict(list)
-    for it, sp in item_to_species.items():
-        by_species[sp].append(it)
 
     lines = [
         "# Tableau des items légendaires CobbleLore",
         "",
-        f"**{len(items_order)} items** — **1 item par espèce** (doublons retirés du mod).",
+        f"**{len(items_order)} items** — **1 item par espèce**.",
         "",
-        "| Item | Pokémon | À quoi ça sert |",
-        "|------|---------|----------------|",
+        "**Règle serveur** : pedestal LM possible → **monument seulement** (pas de spawn monde). "
+        "Sinon → **spawn monde** (item + biomes, Myths and Legends). **Une seule voie par légendaire.**",
+        "",
+        "| Item | Pokémon | Voie |",
+        "|------|---------|------|",
     ]
     for item in items_order:
         sp = item_to_species[item]
         lines.append(f"| `{item}` | {sp} | {describe_use(item, sp, species_keys)} |")
 
-    spawn_items = sum(1 for it in items_order if it in species_keys.get(item_to_species[it], set()))
-    lines.extend(
-        [
-            "",
-            "## Espèces monument-only (pas de spawn monde)",
-            "",
-        ]
+    monument = sorted(s for s in LM_PEDESTAL_SPECIES if s in set(item_to_species.values()))
+    spawn_count = sum(
+        1 for it in items_order if item_to_species[it] not in LM_PEDESTAL_SPECIES
     )
-    for sp, it in sorted(MONUMENT_ONLY.items()):
+
+    lines.extend(["", "## Monument (pedestal) uniquement", ""])
+    for sp in monument:
+        it = next(k for k, v in item_to_species.items() if v == sp)
         lines.append(f"- **{sp}** → `{it}`")
 
     lines.extend(
@@ -91,9 +100,8 @@ def main() -> None:
             "## Compteur",
             "",
             f"- Items : **{len(items_order)}**",
-            f"- Espèces : **{len(by_species)}**",
-            f"- Items avec spawn monde : **{spawn_items}**",
-            f"- Espèces monument-only : **{len(MONUMENT_ONLY)}**",
+            f"- Spawn monde : **{spawn_count}** espèces",
+            f"- Monument only : **{len(monument)}** espèces",
             "",
         ]
     )

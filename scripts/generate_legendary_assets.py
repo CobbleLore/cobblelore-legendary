@@ -194,6 +194,8 @@ def generate_spawn_pools(myths_pools: dict[str, dict]) -> None:
         species_to_item.setdefault(species, item_id)
 
     for species, pool in myths_pools.items():
+        if species in LM_PEDESTAL_SPECIES:
+            continue
         item_id = species_to_item.get(species)
         if not item_id:
             continue
@@ -207,7 +209,7 @@ def generate_spawn_pools(myths_pools: dict[str, dict]) -> None:
 
     # Extra pools for species not in M&L but mapped from items
     for species, item_id in species_to_item.items():
-        if species in myths_pools:
+        if species in myths_pools or species in LM_PEDESTAL_SPECIES:
             continue
         minimal = {
             "enabled": True,

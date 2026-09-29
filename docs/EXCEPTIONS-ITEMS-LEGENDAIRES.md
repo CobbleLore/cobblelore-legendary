@@ -1,5 +1,14 @@
 # Exceptions et cas particuliers
 
+## Règle gameplay (CobbleLore)
+
+**Une seule voie par légendaire**, pas au choix :
+
+1. Si Legendary Monuments propose un **pedestal** pour l’espèce → **monument + item** seulement (aucun pool spawn monde dans le mod).
+2. Sinon → **spawn monde** (item CobbleLore + biomes via Myths and Legends).
+
+**20 espèces** monument-only · **66 espèces** spawn monde. Détail : [`TABLEAU-ITEMS-LEGENDAIRES.md`](TABLEAU-ITEMS-LEGENDAIRES.md).
+
 ## Items retirés du mod (historique doublons)
 
 **Monument-only (spawn supprimé)** : `time_core`, `rare_sea_egg`, `red_eon_ticket`, `blue_eon_ticket`, `z_soul`.
