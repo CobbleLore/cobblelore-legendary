@@ -46,3 +46,4 @@ python3 scripts/generate_legendary_assets.py
 
 - [Analyse complète des mods source](docs/ANALYSE-MODS.md)
 - [Alignement pack CobbleLore](docs/COMPAT-PACK-COBBLELORE.md)
+- [Tableau des 86 items](docs/TABLEAU-ITEMS-LEGENDAIRES.md) · [Exceptions](docs/EXCEPTIONS-ITEMS-LEGENDAIRES.md)
