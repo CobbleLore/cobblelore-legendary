@@ -1,0 +1,9 @@
+.gradle/
+build/
+run/
+analysis/mods/*.jar
+analysis/modpack/
+analysis/decompiled/
+analysis/sources/
+libs/*.jar
+!libs/.gitignore
