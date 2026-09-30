@@ -2,6 +2,8 @@
 
 Mod Fabric **1.21.1** : items légendaires `cobblelore:*` (catalogue Delta/Academy), intégration **Myths and Legends** (key items + spawn pools) et doc/config pour **Legendary Monuments** (pedestals).
 
+**Périmètre :** légendaires + mythiques Cobblemon — **pas d’Ultra Beasts**.
+
 ## Stack serveur / client
 
 - Cobblemon
