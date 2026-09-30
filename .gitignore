@@ -1,9 +1,27 @@
 .gradle/
 build/
 run/
+bin/
+.tmp/
+
+.idea/
+*.iml
+out/
+
+*.class
+*.log
+.DS_Store
+Thumbs.db
+
+**/__pycache__/
+*.py[cod]
+
 analysis/mods/*.jar
 analysis/modpack/
 analysis/decompiled/
 analysis/sources/
 libs/*.jar
 !libs/.gitignore
+
+# One-off ODS / script scratch (regenerate locally)
+scripts/_*
