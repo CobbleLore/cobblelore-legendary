@@ -27,6 +27,14 @@ Depuis **0.1.155**, **Legendary Monuments** est listé côté **client et serveu
 
 Sans **M&L** côté serveur + datapack, les spawn pools `key_item: cobblelore:…` et la consommation d’item au spawn ne s’activent pas. LM seul ne remplace pas M&L pour les spawns ultra-rares au monde.
 
+### Voie unique CobbleLore (spawn monde)
+
+Le datapack **`cobblelore-myths-spawn-override`** (chargé **après** `myths-and-legends`) remplace chaque `mythsandlegends-*.json` par `"enabled": false`. Les pools actifs viennent du mod **`cobblelore-legendary`** (`key_item: cobblelore:…`). Régénérer après mise à jour du datapack M&L :
+
+```bash
+python3 mods/cobblelore-legendary/scripts/generate_myths_spawn_overrides.py
+```
+
 ## Changements notables pack 0.1.149 → 0.1.155 (hors légendaires)
 
 - Serveur : Moog’s structure mods (`mtr-`, `mss-`, `mes-`, `mns-`), `item-obliterator`, `athena-ctm`, `openblocks-elevator`, `clumps`, datapacks farmers-cutting, etc.

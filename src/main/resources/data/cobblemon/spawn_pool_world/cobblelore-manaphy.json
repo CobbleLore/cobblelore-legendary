@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "cobblelore-manaphy-rare_sea_egg",
+      "pokemon": "manaphy",
+      "presets": [
+        "natural"
+      ],
+      "type": "pokemon",
+      "context": "grounded",
+      "bucket": "ultra-rare",
+      "level": "50-70",
+      "weight": 0.1,
+      "condition": {
+        "key_item": "cobblelore:rare_sea_egg"
+      }
+    }
+  ]
+}

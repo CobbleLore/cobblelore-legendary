@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "neededInstalledMods": [],
+  "neededUninstalledMods": [],
+  "spawns": [
+    {
+      "id": "cobblelore-calyrex-mystical_branch",
+      "pokemon": "calyrex",
+      "presets": [
+        "natural"
+      ],
+      "type": "pokemon",
+      "context": "grounded",
+      "bucket": "ultra-rare",
+      "level": "50-70",
+      "weight": 0.1,
+      "condition": {
+        "key_item": "cobblelore:mystical_branch"
+      }
+    }
+  ]
+}

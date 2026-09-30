@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-genesect-1",
+      "id": "cobblelore-genesect-disc_drive",
       "pokemon": "genesect",
       "presets": [
         "natural"
@@ -12,40 +12,9 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "70",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "#cobblemon:is_deep_dark"
-        ],
-        "neededNearbyBlocks": [
-          "minecraft:iron_block"
-        ],
-        "key_item": "cobblelore:disc_drive"
-      }
-    },
-    {
-      "id": "mythsandlegends-genesect-2",
-      "pokemon": "genesect",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "70",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "minecraft:the_end",
-          "minecraft:end_barrens",
-          "minecraft:end_highlands",
-          "minecraft:end_midlands",
-          "minecraft:small_end_islands"
-        ],
-        "neededNearbyBlocks": [
-          "minecraft:iron_block"
-        ],
         "key_item": "cobblelore:disc_drive"
       }
     }

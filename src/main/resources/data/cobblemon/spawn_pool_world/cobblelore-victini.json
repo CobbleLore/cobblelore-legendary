@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-victini-1",
+      "id": "cobblelore-victini-liberty_pass",
       "pokemon": "victini",
       "presets": [
         "natural"
@@ -12,35 +12,10 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "70-100",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "minecraft:badlands",
-          "minecraft:eroded_badlands",
-          "minecraft:savanna"
-        ],
-        "key_item": "cobblelore:victory_star"
-      }
-    },
-    {
-      "id": "mythsandlegends-victini-2",
-      "pokemon": "victini",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "70-100",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#cobblemon:is_volcanic",
-          "#cobblemon:is_thermal",
-          "#cobblemon:is_savanna"
-        ],
-        "key_item": "cobblelore:victory_star"
+        "key_item": "cobblelore:liberty_pass"
       }
     }
   ]

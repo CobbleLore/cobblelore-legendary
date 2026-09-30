@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-arceus-1",
+      "id": "cobblelore-arceus-jewel_of_life",
       "pokemon": "arceus",
       "presets": [
         "natural"
@@ -12,46 +12,9 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "80",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "minecraft:the_end",
-          "minecraft:end_barrens",
-          "minecraft:end_highlands",
-          "minecraft:end_midlands",
-          "minecraft:small_end_islands"
-        ],
-        "key_item": "cobblelore:jewel_of_life"
-      }
-    },
-    {
-      "id": "mythsandlegends-arceus-2",
-      "pokemon": "arceus",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "80",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "minecraft:dark_forest",
-          "#byg:is_magical",
-          "#wythers:is_dark_forest",
-          "byg:skyris_vale",
-          "terralith:amethyst_canyon",
-          "terralith:amethyst_rainforest",
-          "terralith:mirage_isles",
-          "terralith:moonlight_grove",
-          "terralith:moonlight_valley",
-          "wythers:lantern_river",
-          "wythers:mushroom_island",
-          "wythers:snowy_thermal_taiga",
-          "#cobblemon:is_end"
-        ],
         "key_item": "cobblelore:jewel_of_life"
       }
     }

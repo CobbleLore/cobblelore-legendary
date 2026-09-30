@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-regieleki-1",
+      "id": "cobblelore-regieleki-infinite_source",
       "pokemon": "regieleki",
       "presets": [
         "natural"
@@ -12,30 +12,9 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "70",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "#cobblemon:is_deep_dark"
-        ],
-        "key_item": "cobblelore:infinite_source"
-      }
-    },
-    {
-      "id": "mythsandlegends-regieleki-2",
-      "pokemon": "regieleki",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "70",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#cobblemon:is_deep_dark"
-        ],
         "key_item": "cobblelore:infinite_source"
       }
     }

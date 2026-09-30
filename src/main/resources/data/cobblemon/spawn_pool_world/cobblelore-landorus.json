@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-landorus-1",
+      "id": "cobblelore-landorus-landorus_bottle",
       "pokemon": "landorus",
       "presets": [
         "natural"
@@ -15,12 +15,6 @@
       "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "isThundering": true,
-        "biomes": [
-          "minecraft:savanna",
-          "minecraft:sunflower_plains",
-          "minecraft:desert"
-        ],
         "key_item": "cobblelore:landorus_bottle"
       }
     }

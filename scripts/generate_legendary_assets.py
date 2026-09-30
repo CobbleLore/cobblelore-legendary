@@ -2,10 +2,13 @@
 """Generate cobblelore item assets, spawn pools, and gap report from analysis JARs."""
 from __future__ import annotations
 
+import hashlib
 import json
 import shutil
 import zipfile
 from pathlib import Path
+
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 DELTA = ROOT / "analysis/mods/delta-client.jar"
@@ -16,123 +19,24 @@ ASSETS = RES / "assets/cobblelore"
 DATA = RES / "data/cobblemon/spawn_pool_world"
 DOCS = ROOT / "docs"
 
-LEGENDARY_IDS = """
-rare_dna time_core wishing_star meteorite rare_sea_egg nightmare_core gracidea jewel_of_life
-victory_star resolute_sword relic_disc disc_drive pink_diamond ring steam_engine soul_heart z_soul
-meltan_nut dada_scarf mythical_pecha_berry glacial_orb static_orb flare_orb cloning_cable
-sacred_lightning sacred_flame sacred_droplet silver_wing rainbow_wing steel_alloy never_melt_icicle
-ancient_ingot infinite_source dragon_skull titan_totem blue_eon_ticket red_eon_ticket blue_orb red_orb
-jade_orb ruby_of_willpower ruby_of_emotion ruby_of_knowledge adamant_orb lustrous_orb griseous_orb
-magma_chunk lunar_feather cobalion_sword virizion_sword terrakion_sword thundurus_bottle tornadus_bottle
-landorus_bottle enamorus_bottle light_stone dark_stone gray_stone tree_of_life cocoon_of_destruction
-zygarde_cube broken_memory electric_totem psychic_totem grass_totem water_totem solar_core lunar_core
-eclipse_core rusted_sword rusted_shield dynamax_core mystical_branch frozen_hoof ghostly_hoof
-koraidon_key miraidon_key toxic_scarf toxic_headband toxic_ribbon stellar_tera_core psychic_orb
-combat_orb dark_orb ruinous_sword ruinous_beads ruinous_tablet ruinous_vessel zeraora_tuft cosmic_core
-cosmic_flute odd_sea_egg rks_communicator scroll_of_challenge teal_mask wellspring_mask hearthflame_mask
-cornerstone_mask
-""".split()
+LEGENDARY_IDS: list[str] = []
+ITEM_TO_SPECIES: dict[str, str] = {}
 
-# cobblelore item -> primary Cobblemon species (1:1 design target)
-ITEM_TO_SPECIES: dict[str, str] = {
-    "rare_dna": "mewtwo",
-    "cloning_cable": "mewtwo",
-    "time_core": "dialga",
-    "wishing_star": "jirachi",
-    "meteorite": "deoxys",
-    "rare_sea_egg": "mew",
-    "odd_sea_egg": "mew",
-    "nightmare_core": "darkrai",
-    "gracidea": "shaymin",
-    "jewel_of_life": "arceus",
-    "victory_star": "victini",
-    "resolute_sword": "keldeo",
-    "relic_disc": "magearna",
-    "disc_drive": "genesect",
-    "pink_diamond": "diancie",
-    "ring": "hoopa",
-    "steam_engine": "volcanion",
-    "soul_heart": "magearna",
-    "z_soul": "zacian",
-    "meltan_nut": "meltan",
-    "dada_scarf": "zarude",
-    "mythical_pecha_berry": "pecharunt",
-    "glacial_orb": "articuno",
-    "static_orb": "zapdos",
-    "flare_orb": "moltres",
-    "sacred_lightning": "raikou",
-    "sacred_flame": "entei",
-    "sacred_droplet": "suicune",
-    "silver_wing": "lugia",
-    "rainbow_wing": "hooh",
-    "steel_alloy": "registeel",
-    "never_melt_icicle": "regice",
-    "ancient_ingot": "regirock",
-    "infinite_source": "regieleki",
-    "dragon_skull": "regidrago",
-    "titan_totem": "regigigas",
-    "blue_eon_ticket": "latios",
-    "red_eon_ticket": "latias",
-    "blue_orb": "kyogre",
-    "red_orb": "groudon",
-    "jade_orb": "rayquaza",
-    "ruby_of_willpower": "azelf",
-    "ruby_of_emotion": "mesprit",
-    "ruby_of_knowledge": "uxie",
-    "adamant_orb": "dialga",
-    "lustrous_orb": "palkia",
-    "griseous_orb": "giratina",
-    "magma_chunk": "heatran",
-    "lunar_feather": "cresselia",
-    "cobalion_sword": "cobalion",
-    "virizion_sword": "virizion",
-    "terrakion_sword": "terrakion",
-    "thundurus_bottle": "thundurus",
-    "tornadus_bottle": "tornadus",
-    "landorus_bottle": "landorus",
-    "enamorus_bottle": "enamorus",
-    "light_stone": "reshiram",
-    "dark_stone": "zekrom",
-    "gray_stone": "kyurem",
-    "tree_of_life": "xerneas",
-    "cocoon_of_destruction": "yveltal",
-    "zygarde_cube": "zygarde",
-    "broken_memory": "silvally",
-    "electric_totem": "tapukoko",
-    "psychic_totem": "tapulele",
-    "grass_totem": "tapubulu",
-    "water_totem": "tapufini",
-    "solar_core": "solgaleo",
-    "lunar_core": "lunala",
-    "eclipse_core": "necrozma",
-    "rusted_sword": "zacian",
-    "rusted_shield": "zamazenta",
-    "dynamax_core": "eternatus",
-    "mystical_branch": "celebi",
-    "frozen_hoof": "glastrier",
-    "ghostly_hoof": "spectrier",
-    "koraidon_key": "koraidon",
-    "miraidon_key": "miraidon",
-    "toxic_scarf": "okidogi",
-    "toxic_headband": "munkidori",
-    "toxic_ribbon": "fezandipiti",
-    "stellar_tera_core": "terapagos",
-    "psychic_orb": "latias",
-    "combat_orb": "latios",
-    "dark_orb": "darkrai",
-    "ruinous_sword": "chienpao",
-    "ruinous_beads": "chiyu",
-    "ruinous_tablet": "wochien",
-    "ruinous_vessel": "tinglu",
-    "zeraora_tuft": "zeraora",
-    "cosmic_core": "cosmog",
-    "cosmic_flute": "cosmoem",
-    "rks_communicator": "silvally",
-    "scroll_of_challenge": "kubfu",
-    "teal_mask": "ogerpon",
-    "wellspring_mask": "ogerpon",
-    "hearthflame_mask": "ogerpon",
-    "cornerstone_mask": "ogerpon",
+# When an ODS id has no Delta texture, copy from a legacy gimmick id if present.
+TEXTURE_ALIAS: dict[str, str] = {
+    "heart_diamond": "pink_diamond",
+    "liberty_pass": "victory_star",
+    "sun_flute": "solar_core",
+    "moon_flute": "lunar_core",
+    "scarlet_book": "koraidon_key",
+    "violet_book": "miraidon_key",
+    "iceroot_carrot": "frozen_hoof",
+    "shaderoot_carrot": "ghostly_hoof",
+    "cosmic_flute": "cosmic_core",
+    "star_flute": "cosmic_core",
+    "azelf_s_fang": "ruby_of_willpower",
+    "mesprit_s_plume": "ruby_of_emotion",
+    "uxie_s_claw": "ruby_of_knowledge",
 }
 
 LM_TRACKER_STRUCTURES = {
@@ -149,30 +53,100 @@ LM_PEDESTAL_SPECIES = {
     "kyurem", "zacian", "zamazenta",
 }
 
+# ODS Galar bird key items → Cobblemon spawn string (species + regional aspect).
+ITEM_SPAWN_POKEMON: dict[str, str] = {
+    "psychic_orb": "articuno galarian",
+    "combat_orb": "zapdos galarian",
+    "dark_orb": "moltres galarian",
+}
+
+
+def sanitize_spawn_condition(cond: dict | None) -> None:
+    """CobbleLore: only the legendary key item gates spawns (no extra inventory items)."""
+    if not cond:
+        return
+    cond.pop("item_requirement", None)
+
+
+def spawn_pokemon_string(species: str, item_id: str) -> str:
+    return ITEM_SPAWN_POKEMON.get(item_id, species)
+
+
+def placeholder_color(item_id: str) -> tuple[int, int, int]:
+    digest = hashlib.sha256(item_id.encode()).digest()
+    return digest[0], digest[1], digest[2]
+
+
+def write_placeholder_png(path: Path, item_id: str) -> None:
+    color = placeholder_color(item_id)
+    img = Image.new("RGBA", (16, 16), color + (255,))
+    img.save(path)
+
+
+def read_delta_texture(z: zipfile.ZipFile | None, item_id: str) -> bytes | None:
+    if z is None:
+        return None
+    for candidate in (item_id, TEXTURE_ALIAS.get(item_id, "")):
+        if not candidate:
+            continue
+        src = f"assets/cobblemon/textures/item/gimmick/{candidate}.png"
+        try:
+            return z.read(src)
+        except KeyError:
+            continue
+    return None
+
 
 def extract_textures() -> None:
     ASSETS.mkdir(parents=True, exist_ok=True)
     tex_dir = ASSETS / "textures/item"
-    tex_dir.mkdir(parents=True, exist_ok=True)
     models_dir = ASSETS / "models/item"
+    tex_dir.mkdir(parents=True, exist_ok=True)
     models_dir.mkdir(parents=True, exist_ok=True)
-    with zipfile.ZipFile(DELTA) as z:
+
+    keep = set(LEGENDARY_IDS)
+    for path in tex_dir.glob("*.png"):
+        if path.stem not in keep:
+            path.unlink()
+    for path in models_dir.glob("*.json"):
+        if path.stem not in keep:
+            path.unlink()
+
+    delta_zip: zipfile.ZipFile | None = None
+    if DELTA.is_file():
+        delta_zip = zipfile.ZipFile(DELTA)
+    else:
+        print("WARN missing", DELTA, "— using placeholders and existing PNGs only")
+
+    try:
         for item_id in LEGENDARY_IDS:
-            src = f"assets/cobblemon/textures/item/gimmick/{item_id}.png"
-            try:
-                data = z.read(src)
-            except KeyError:
-                print("WARN missing texture", item_id)
-                continue
-            (tex_dir / f"{item_id}.png").write_bytes(data)
+            tex_path = tex_dir / f"{item_id}.png"
+            data = read_delta_texture(delta_zip, item_id) if delta_zip else None
+            if data:
+                tex_path.write_bytes(data)
+            elif not tex_path.is_file():
+                alias = TEXTURE_ALIAS.get(item_id)
+                alias_path = tex_dir / f"{alias}.png" if alias else None
+                if alias_path and alias_path.is_file():
+                    shutil.copy(alias_path, tex_path)
+                else:
+                    write_placeholder_png(tex_path, item_id)
+                    print("PLACEHOLDER texture", item_id)
+
             model = {
                 "parent": "minecraft:item/generated",
                 "textures": {"layer0": f"cobblelore:item/{item_id}"},
             }
             (models_dir / f"{item_id}.json").write_text(json.dumps(model, indent=2) + "\n")
+    finally:
+        if delta_zip:
+            delta_zip.close()
 
 
 def load_myths_pools() -> dict[str, dict]:
+    if not MYTHS.is_file():
+        print("WARN missing", MYTHS, "— spawn pools will be minimal cobblelore-only")
+        return {}
     pools = {}
     with zipfile.ZipFile(MYTHS) as z:
         for name in z.namelist():
@@ -189,36 +163,53 @@ def generate_spawn_pools(myths_pools: dict[str, dict]) -> None:
     if DATA.exists():
         shutil.rmtree(DATA)
     DATA.mkdir(parents=True)
-    species_to_item: dict[str, str] = {}
+
+    species_to_items: dict[str, list[str]] = {}
     for item_id, species in ITEM_TO_SPECIES.items():
-        species_to_item.setdefault(species, item_id)
+        species_to_items.setdefault(species, []).append(item_id)
 
     for species, pool in myths_pools.items():
         if species in LM_PEDESTAL_SPECIES:
             continue
-        item_id = species_to_item.get(species)
-        if not item_id:
+        item_ids = species_to_items.get(species)
+        if not item_ids:
             continue
         new_pool = json.loads(json.dumps(pool))
+        spawn_idx = 0
         for spawn in new_pool.get("spawns", []):
             cond = spawn.get("condition")
             if cond and "key_item" in cond:
+                item_id = item_ids[min(spawn_idx, len(item_ids) - 1)]
                 cond["key_item"] = f"cobblelore:{item_id}"
+                sanitize_spawn_condition(cond)
+                spawn["pokemon"] = spawn_pokemon_string(species, item_id)
+                spawn_idx += 1
+        for extra_item in item_ids[spawn_idx:]:
+            template = new_pool["spawns"][0] if new_pool.get("spawns") else None
+            if not template:
+                break
+            extra = json.loads(json.dumps(template))
+            extra["id"] = f"cobblelore-{species}-{extra_item}"
+            extra["pokemon"] = spawn_pokemon_string(species, extra_item)
+            cond = extra.get("condition")
+            if cond:
+                cond["key_item"] = f"cobblelore:{extra_item}"
+                sanitize_spawn_condition(cond)
+            new_pool.setdefault("spawns", []).append(extra)
+        for spawn in new_pool.get("spawns", []):
+            sanitize_spawn_condition(spawn.get("condition"))
         out = DATA / f"cobblelore-{species}.json"
         out.write_text(json.dumps(new_pool, indent=2) + "\n")
 
-    # Extra pools for species not in M&L but mapped from items
-    for species, item_id in species_to_item.items():
+    for species, item_ids in species_to_items.items():
         if species in myths_pools or species in LM_PEDESTAL_SPECIES:
             continue
-        minimal = {
-            "enabled": True,
-            "neededInstalledMods": [],
-            "neededUninstalledMods": [],
-            "spawns": [
+        spawns = []
+        for item_id in item_ids:
+            spawns.append(
                 {
-                    "id": f"cobblelore-{species}-0",
-                    "pokemon": species,
+                    "id": f"cobblelore-{species}-{item_id}",
+                    "pokemon": spawn_pokemon_string(species, item_id),
                     "presets": ["natural"],
                     "type": "pokemon",
                     "context": "grounded",
@@ -227,9 +218,20 @@ def generate_spawn_pools(myths_pools: dict[str, dict]) -> None:
                     "weight": 0.1,
                     "condition": {"key_item": f"cobblelore:{item_id}"},
                 }
-            ],
+            )
+        minimal = {
+            "enabled": True,
+            "neededInstalledMods": [],
+            "neededUninstalledMods": [],
+            "spawns": spawns,
         }
         (DATA / f"cobblelore-{species}.json").write_text(json.dumps(minimal, indent=2) + "\n")
+
+    for path in DATA.glob("cobblelore-*.json"):
+        pool = json.loads(path.read_text(encoding="utf-8"))
+        for spawn in pool.get("spawns", []):
+            sanitize_spawn_condition(spawn.get("condition"))
+        path.write_text(json.dumps(pool, indent=2) + "\n", encoding="utf-8")
 
 
 def generate_gaps() -> None:
@@ -275,11 +277,18 @@ def generate_gaps() -> None:
 
 
 def write_catalog_json() -> None:
+    """Preserve optional metadata from disk; refresh items + mappings only."""
     meta = RES / "cobblelore"
     meta.mkdir(parents=True, exist_ok=True)
-    (meta / "legendary_items.json").write_text(
-        json.dumps({"items": LEGENDARY_IDS, "item_to_species": ITEM_TO_SPECIES}, indent=2) + "\n"
-    )
+    path = meta / "legendary_items.json"
+    extra: dict = {}
+    if path.exists():
+        existing = json.loads(path.read_text(encoding="utf-8"))
+        for key in ("source_ods", "item_labels_en"):
+            if key in existing:
+                extra[key] = existing[key]
+    payload = {"items": LEGENDARY_IDS, "item_to_species": ITEM_TO_SPECIES, **extra}
+    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def sync_catalog_from_disk() -> None:

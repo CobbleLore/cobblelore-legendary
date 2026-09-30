@@ -3,7 +3,9 @@
   "package": "com.cobblelore.legendary.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "mythsandlegends.MixinItems"
+    "mythsandlegends.MixinItems",
+    "legendarymonuments.MixinBasePedestalBlock",
+    "legendarymonuments.MixinGameplayConfig"
   ],
   "injectors": {
     "defaultRequire": 1

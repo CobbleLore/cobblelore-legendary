@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-xerneas-1",
+      "id": "cobblelore-xerneas-tree_of_life",
       "pokemon": "xerneas",
       "presets": [
         "natural"
@@ -12,34 +12,9 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "50",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "minecraft:flower_forest",
-          "minecraft:forest",
-          "minecraft:meadow"
-        ],
-        "key_item": "cobblelore:tree_of_life"
-      }
-    },
-    {
-      "id": "mythsandlegends-xerneas-2",
-      "pokemon": "xerneas",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "50",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#cobblemon:is_forest",
-          "#cobblemon:is_magical",
-          "#cobblemon:is_floral"
-        ],
         "key_item": "cobblelore:tree_of_life"
       }
     }

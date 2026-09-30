@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-tornadus-1",
+      "id": "cobblelore-tornadus-tornadus_bottle",
       "pokemon": "tornadus",
       "presets": [
         "natural"
@@ -15,12 +15,6 @@
       "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "isThundering": true,
-        "biomes": [
-          "minecraft:jungle",
-          "minecraft:bamboo_jungle",
-          "minecraft:jungle_edge"
-        ],
         "key_item": "cobblelore:tornadus_bottle"
       }
     }

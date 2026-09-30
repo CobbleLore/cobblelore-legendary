@@ -1,0 +1,30 @@
+{
+  "pedestals": {
+    "enteiPedestalItem": "cobblelore:sacred_flame",
+    "raikouPedestalItem": "cobblelore:sacred_lightning",
+    "suicunePedestalItem": "cobblelore:sacred_droplet",
+    "heatranPedestalItem": "cobblelore:magma_chunk",
+    "hoohPedestalItem": "cobblelore:rainbow_wing",
+    "latiasPedestalItem": "cobblelore:red_eon_ticket",
+    "latiosPedestalItem": "cobblelore:blue_eon_ticket",
+    "lugiaPedestalItem": "cobblelore:silver_wing",
+    "regicePedestalItem": "cobblelore:never_melt_icicle",
+    "regirockPedestalItem": "cobblelore:ancient_ingot",
+    "registeelPedestalItem": "cobblelore:steel_alloy",
+    "regigigasPedestalItem": "cobblelore:titan_totem",
+    "regielekiPedestalItem": "cobblelore:infinite_source",
+    "regidragoPedestalItem": "cobblelore:dragon_skull",
+    "hoopaPedestalFirstItem": "cobblelore:ring",
+    "hoopaPedestalSecondItem": "cobblelore:ring",
+    "zekromPedestalFirstItem": "cobblelore:dark_stone",
+    "zekromPedestalSecondItem": "cobblelore:dark_stone",
+    "reshiramPedestalFirstItem": "cobblelore:light_stone",
+    "reshiramPedestalSecondItem": "cobblelore:light_stone",
+    "kyuremPedestalFirstItem": "cobblelore:gray_stone",
+    "kyuremPedestalSecondItem": "cobblelore:gray_stone",
+    "zacianPedestalFirstItem": "cobblelore:rusted_sword",
+    "zacianPedestalSecondItem": "cobblelore:rusted_sword",
+    "zamazentaPedestalFirstItem": "cobblelore:rusted_shield",
+    "zamazentaPedestalSecondItem": "cobblelore:rusted_shield"
+  }
+}

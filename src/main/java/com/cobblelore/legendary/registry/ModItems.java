@@ -41,14 +41,6 @@ public final class ModItems {
         return Collections.unmodifiableMap(ALL);
     }
 
-    public static List<String> keyItemIdsForMythsAndLegends() {
-        List<String> out = new ArrayList<>(ALL.size());
-        for (Identifier id : ALL.keySet()) {
-            out.add(id.toString());
-        }
-        return out;
-    }
-
     private static List<String> loadItemIds() {
         try (var stream = ModItems.class.getClassLoader().getResourceAsStream("cobblelore/legendary_items.json")) {
             if (stream == null) {

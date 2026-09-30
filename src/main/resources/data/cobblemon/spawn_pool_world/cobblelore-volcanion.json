@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-volcanion-1",
+      "id": "cobblelore-volcanion-steam_engine",
       "pokemon": "volcanion",
       "presets": [
         "natural"
@@ -12,38 +12,9 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "70",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "#minecraft:is_nether"
-        ],
-        "key_item": "cobblelore:steam_engine"
-      }
-    },
-    {
-      "id": "mythsandlegends-volcanion-2",
-      "pokemon": "volcanion",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "70",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#cobblemon:is_volcanic",
-          "terralith:cave/mantle_caves",
-          "terralith:volcanic_crater",
-          "terralith:volcanic_peaks",
-          "wythers:icy_volcano",
-          "wythers:tropical_volcano",
-          "wythers:volcano",
-          "wythers:volcanic_chamber",
-          "wythers:volcanic_crater"
-        ],
         "key_item": "cobblelore:steam_engine"
       }
     }

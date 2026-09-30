@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "cobblelore-chiyu-0",
+      "id": "cobblelore-chiyu-ruinous_beads",
       "pokemon": "chiyu",
       "presets": [
         "natural"

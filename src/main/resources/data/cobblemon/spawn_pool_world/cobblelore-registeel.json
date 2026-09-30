@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-registeel-1",
+      "id": "cobblelore-registeel-steel_alloy",
       "pokemon": "registeel",
       "presets": [
         "natural"
@@ -12,58 +12,9 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "40",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "minecraft:deep_dark",
-          "#cobblemon:is_deep_dark"
-        ],
-        "neededNearbyBlocks": [
-          "minecraft:iron_block"
-        ],
-        "key_item": "cobblelore:steel_alloy"
-      }
-    },
-    {
-      "id": "mythsandlegends-registeel-2",
-      "pokemon": "registeel",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "40",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#minecraft:village"
-        ],
-        "neededNearbyBlocks": [
-          "minecraft:iron_block"
-        ],
-        "key_item": "cobblelore:steel_alloy"
-      }
-    },
-    {
-      "id": "mythsandlegends-registeel-2",
-      "pokemon": "registeel",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "40",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#minecraft:village"
-        ],
-        "neededNearbyBlocks": [
-          "minecraft:iron_block"
-        ],
         "key_item": "cobblelore:steel_alloy"
       }
     }

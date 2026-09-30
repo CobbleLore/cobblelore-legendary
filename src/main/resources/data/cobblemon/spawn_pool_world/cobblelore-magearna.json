@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-magearna-1",
+      "id": "cobblelore-magearna-soul_heart",
       "pokemon": "magearna",
       "presets": [
         "natural"
@@ -12,87 +12,10 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "50",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "#cobblemon:is_deep_dark"
-        ],
-        "neededNearbyBlocks": [
-          "minecraft:iron_block"
-        ],
-        "key_item": "cobblelore:relic_disc"
-      }
-    },
-    {
-      "id": "mythsandlegends-magearna-2",
-      "pokemon": "magearna",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "50",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "minecraft:the_end",
-          "minecraft:end_barrens",
-          "minecraft:end_highlands",
-          "minecraft:end_midlands",
-          "minecraft:small_end_islands"
-        ],
-        "neededNearbyBlocks": [
-          "minecraft:iron_block"
-        ],
-        "key_item": "cobblelore:relic_disc"
-      }
-    },
-    {
-      "id": "mythsandlegends-magearna-3",
-      "pokemon": "magearna",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "50",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#cobblemon:is_deep_dark"
-        ],
-        "neededNearbyBlocks": [
-          "minecraft:iron_block"
-        ],
-        "key_item": "cobblelore:relic_disc"
-      }
-    },
-    {
-      "id": "mythsandlegends-magearna-4",
-      "pokemon": "magearna",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "50",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "minecraft:the_end",
-          "minecraft:end_barrens",
-          "minecraft:end_highlands",
-          "minecraft:end_midlands",
-          "minecraft:small_end_islands"
-        ],
-        "neededNearbyBlocks": [
-          "minecraft:iron_block"
-        ],
-        "key_item": "cobblelore:relic_disc"
+        "key_item": "cobblelore:soul_heart"
       }
     }
   ]

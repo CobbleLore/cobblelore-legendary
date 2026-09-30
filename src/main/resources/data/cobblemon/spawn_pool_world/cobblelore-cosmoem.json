@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "cobblelore-cosmoem-0",
+      "id": "cobblelore-cosmoem-star_flute",
       "pokemon": "cosmoem",
       "presets": [
         "natural"
@@ -15,7 +15,7 @@
       "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "key_item": "cobblelore:cosmic_flute"
+        "key_item": "cobblelore:star_flute"
       }
     }
   ]

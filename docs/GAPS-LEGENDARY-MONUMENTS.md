@@ -1,112 +1,109 @@
 # Couverture structures / pedestals (Legendary Monuments 8.1)
 
-Légende : **M&L** = pool spawn Myths and Legends de base pour l'espèce ; **LM struct** = monument piste Arc Phone (approx.) ; **LM pedestal** = bloc pedestal dédié.
+L�gende : **M&L** = pool spawn Myths and Legends de base pour l'esp�ce ; **LM struct** = monument piste Arc Phone (approx.) ; **LM pedestal** = bloc pedestal d�di�.
 
-| Item `cobblelore:` | Espèce | M&L vanilla pool | LM pedestal | Notes |
+| Item `cobblelore:` | Esp�ce | M&L vanilla pool | LM pedestal | Notes |
 |---|---|---|---|---|
-| `rare_dna` | mewtwo | oui | non | M&L biome spawn — pas de pedestal LM |
-| `time_core` | dialga | oui | oui |  |
-| `wishing_star` | jirachi | oui | non | M&L biome spawn — pas de pedestal LM |
-| `meteorite` | deoxys | oui | non | M&L biome spawn — pas de pedestal LM |
-| `rare_sea_egg` | mew | oui | oui |  |
-| `nightmare_core` | darkrai | oui | non | M&L biome spawn — pas de pedestal LM |
-| `gracidea` | shaymin | oui | non | M&L biome spawn — pas de pedestal LM |
-| `jewel_of_life` | arceus | oui | non | M&L biome spawn — pas de pedestal LM |
-| `victory_star` | victini | oui | non | M&L biome spawn — pas de pedestal LM |
-| `resolute_sword` | keldeo | oui | non | M&L biome spawn — pas de pedestal LM |
-| `relic_disc` | magearna | oui | non | M&L biome spawn — pas de pedestal LM |
-| `disc_drive` | genesect | oui | non | M&L biome spawn — pas de pedestal LM |
-| `pink_diamond` | diancie | oui | non | M&L biome spawn — pas de pedestal LM |
-| `ring` | hoopa | oui | oui |  |
-| `steam_engine` | volcanion | oui | non | M&L biome spawn — pas de pedestal LM |
-| `soul_heart` | magearna | oui | non | M&L biome spawn — pas de pedestal LM |
-| `z_soul` | zacian | oui | oui |  |
-| `meltan_nut` | meltan | oui | non | M&L biome spawn — pas de pedestal LM |
-| `dada_scarf` | zarude | oui | non | M&L biome spawn — pas de pedestal LM |
-| `mythical_pecha_berry` | pecharunt | oui | non | M&L biome spawn — pas de pedestal LM |
-| `glacial_orb` | articuno | oui | non | M&L biome spawn — pas de pedestal LM |
-| `static_orb` | zapdos | oui | non | M&L biome spawn — pas de pedestal LM |
-| `flare_orb` | moltres | oui | non | M&L biome spawn — pas de pedestal LM |
-| `cloning_cable` | mewtwo | oui | non | M&L biome spawn — pas de pedestal LM |
-| `sacred_lightning` | raikou | oui | oui |  |
-| `sacred_flame` | entei | oui | oui |  |
-| `sacred_droplet` | suicune | oui | oui |  |
-| `silver_wing` | lugia | oui | oui |  |
-| `rainbow_wing` | hooh | oui | oui |  |
-| `steel_alloy` | registeel | oui | non | M&L biome spawn — pas de pedestal LM |
-| `never_melt_icicle` | regice | oui | non | M&L biome spawn — pas de pedestal LM |
-| `ancient_ingot` | regirock | oui | non | M&L biome spawn — pas de pedestal LM |
-| `infinite_source` | regieleki | oui | non | M&L biome spawn — pas de pedestal LM |
-| `dragon_skull` | regidrago | oui | non | M&L biome spawn — pas de pedestal LM |
-| `titan_totem` | regigigas | oui | non | M&L biome spawn — pas de pedestal LM |
-| `blue_eon_ticket` | latios | oui | oui |  |
-| `red_eon_ticket` | latias | oui | oui |  |
-| `blue_orb` | kyogre | oui | non | M&L biome spawn — pas de pedestal LM |
-| `red_orb` | groudon | oui | non | M&L biome spawn — pas de pedestal LM |
-| `jade_orb` | rayquaza | oui | non | M&L biome spawn — pas de pedestal LM |
-| `ruby_of_willpower` | azelf | oui | non | M&L biome spawn — pas de pedestal LM |
-| `ruby_of_emotion` | mesprit | oui | non | M&L biome spawn — pas de pedestal LM |
-| `ruby_of_knowledge` | uxie | oui | non | M&L biome spawn — pas de pedestal LM |
-| `adamant_orb` | dialga | oui | oui |  |
-| `lustrous_orb` | palkia | oui | oui |  |
-| `griseous_orb` | giratina | oui | oui |  |
-| `magma_chunk` | heatran | oui | oui |  |
-| `lunar_feather` | cresselia | oui | non | M&L biome spawn — pas de pedestal LM |
-| `cobalion_sword` | cobalion | oui | non | M&L biome spawn — pas de pedestal LM |
-| `virizion_sword` | virizion | oui | non | M&L biome spawn — pas de pedestal LM |
-| `terrakion_sword` | terrakion | oui | non | M&L biome spawn — pas de pedestal LM |
-| `thundurus_bottle` | thundurus | oui | non | M&L biome spawn — pas de pedestal LM |
-| `tornadus_bottle` | tornadus | oui | non | M&L biome spawn — pas de pedestal LM |
-| `landorus_bottle` | landorus | oui | non | M&L biome spawn — pas de pedestal LM |
+| `rare_dna` | mew | non | oui | spawn via pool cobblelore minimal |
+| `gs_ball` | celebi | non | non | spawn via pool cobblelore minimal |
+| `wishing_star` | jirachi | non | non | spawn via pool cobblelore minimal |
+| `meteorite` | deoxys | non | non | spawn via pool cobblelore minimal |
+| `rare_sea_egg` | manaphy | non | non | spawn via pool cobblelore minimal |
+| `nightmare_core` | darkrai | non | non | spawn via pool cobblelore minimal |
+| `gracidea` | shaymin | non | non | spawn via pool cobblelore minimal |
+| `jewel_of_life` | arceus | non | non | spawn via pool cobblelore minimal |
+| `liberty_pass` | victini | non | non | spawn via pool cobblelore minimal |
+| `resolute_sword` | keldeo | non | non | spawn via pool cobblelore minimal |
+| `relic_disc` | meloetta | non | non | spawn via pool cobblelore minimal |
+| `disc_drive` | genesect | non | non | spawn via pool cobblelore minimal |
+| `heart_diamond` | diancie | non | non | spawn via pool cobblelore minimal |
+| `ring` | hoopa | non | oui | spawn via pool cobblelore minimal |
+| `steam_engine` | volcanion | non | non | spawn via pool cobblelore minimal |
+| `soul_heart` | magearna | non | non | spawn via pool cobblelore minimal |
+| `z_soul` | marshadow | non | non | spawn via pool cobblelore minimal |
+| `meltan_nut` | meltan | non | non | spawn via pool cobblelore minimal |
+| `dada_scarf` | zarude | non | non | spawn via pool cobblelore minimal |
+| `mythical_pecha_berry` | pecharunt | non | non | spawn via pool cobblelore minimal |
+| `glacial_orb` | articuno | non | non | spawn via pool cobblelore minimal |
+| `static_orb` | zapdos | non | non | spawn via pool cobblelore minimal |
+| `flare_orb` | moltres | non | non | spawn via pool cobblelore minimal |
+| `cloning_cable` | mewtwo | non | non | spawn via pool cobblelore minimal |
+| `sacred_lightning` | raikou | non | oui | spawn via pool cobblelore minimal |
+| `sacred_flame` | entei | non | oui | spawn via pool cobblelore minimal |
+| `sacred_droplet` | suicune | non | oui | spawn via pool cobblelore minimal |
+| `silver_wing` | lugia | non | oui | spawn via pool cobblelore minimal |
+| `rainbow_wing` | hooh | non | oui | spawn via pool cobblelore minimal |
+| `steel_alloy` | registeel | non | non | spawn via pool cobblelore minimal |
+| `never_melt_icicle` | regice | non | non | spawn via pool cobblelore minimal |
+| `ancient_ingot` | regirock | non | non | spawn via pool cobblelore minimal |
+| `infinite_source` | regieleki | non | non | spawn via pool cobblelore minimal |
+| `dragon_skull` | regidrago | non | non | spawn via pool cobblelore minimal |
+| `titan_totem` | regigigas | non | non | spawn via pool cobblelore minimal |
+| `blue_eon_ticket` | latios | non | oui | spawn via pool cobblelore minimal |
+| `red_eon_ticket` | latias | non | oui | spawn via pool cobblelore minimal |
+| `blue_orb` | kyogre | non | non | spawn via pool cobblelore minimal |
+| `red_orb` | groudon | non | non | spawn via pool cobblelore minimal |
+| `jade_orb` | rayquaza | non | non | spawn via pool cobblelore minimal |
+| `azelf_s_fang` | azelf | non | non | spawn via pool cobblelore minimal |
+| `mesprit_s_plume` | mesprit | non | non | spawn via pool cobblelore minimal |
+| `uxie_s_claw` | uxie | non | non | spawn via pool cobblelore minimal |
+| `adamant_orb` | dialga | non | oui | spawn via pool cobblelore minimal |
+| `lustrous_orb` | palkia | non | oui | spawn via pool cobblelore minimal |
+| `griseous_orb` | giratina | non | oui | spawn via pool cobblelore minimal |
+| `magma_chunk` | heatran | non | oui | spawn via pool cobblelore minimal |
+| `lunar_feather` | cresselia | non | non | spawn via pool cobblelore minimal |
+| `virizion_sword` | virizion | non | non | spawn via pool cobblelore minimal |
+| `terrakion_sword` | terrakion | non | non | spawn via pool cobblelore minimal |
+| `cobalion_sword` | cobalion | non | non | spawn via pool cobblelore minimal |
+| `thundurus_bottle` | thundurus | non | non | spawn via pool cobblelore minimal |
+| `tornadus_bottle` | tornadus | non | non | spawn via pool cobblelore minimal |
+| `landorus_bottle` | landorus | non | non | spawn via pool cobblelore minimal |
 | `enamorus_bottle` | enamorus | non | non | spawn via pool cobblelore minimal |
-| `light_stone` | reshiram | oui | oui |  |
-| `dark_stone` | zekrom | oui | oui |  |
-| `gray_stone` | kyurem | oui | oui |  |
-| `tree_of_life` | xerneas | oui | non | M&L biome spawn — pas de pedestal LM |
-| `cocoon_of_destruction` | yveltal | oui | non | M&L biome spawn — pas de pedestal LM |
+| `light_stone` | reshiram | non | oui | spawn via pool cobblelore minimal |
+| `dark_stone` | zekrom | non | oui | spawn via pool cobblelore minimal |
+| `gray_stone` | kyurem | non | oui | spawn via pool cobblelore minimal |
+| `tree_of_life` | xerneas | non | non | spawn via pool cobblelore minimal |
+| `cocoon_of_destruction` | yveltal | non | non | spawn via pool cobblelore minimal |
 | `zygarde_cube` | zygarde | non | non | spawn via pool cobblelore minimal |
 | `broken_memory` | silvally | non | non | spawn via pool cobblelore minimal |
-| `electric_totem` | tapukoko | oui | non | M&L biome spawn — pas de pedestal LM |
-| `psychic_totem` | tapulele | oui | non | M&L biome spawn — pas de pedestal LM |
-| `grass_totem` | tapubulu | oui | non | M&L biome spawn — pas de pedestal LM |
-| `water_totem` | tapufini | oui | non | M&L biome spawn — pas de pedestal LM |
-| `solar_core` | solgaleo | oui | non | M&L biome spawn — pas de pedestal LM |
-| `lunar_core` | lunala | oui | non | M&L biome spawn — pas de pedestal LM |
-| `eclipse_core` | necrozma | oui | non | M&L biome spawn — pas de pedestal LM |
-| `rusted_sword` | zacian | oui | oui |  |
-| `rusted_shield` | zamazenta | oui | oui |  |
-| `dynamax_core` | eternatus | oui | non | M&L biome spawn — pas de pedestal LM |
-| `mystical_branch` | celebi | oui | non | M&L biome spawn — pas de pedestal LM |
-| `frozen_hoof` | glastrier | oui | oui |  |
-| `ghostly_hoof` | spectrier | oui | oui |  |
-| `koraidon_key` | koraidon | oui | non | M&L biome spawn — pas de pedestal LM |
-| `miraidon_key` | miraidon | oui | non | M&L biome spawn — pas de pedestal LM |
+| `electric_totem` | tapukoko | non | non | spawn via pool cobblelore minimal |
+| `psychic_totem` | tapulele | non | non | spawn via pool cobblelore minimal |
+| `grass_totem` | tapubulu | non | non | spawn via pool cobblelore minimal |
+| `water_totem` | tapufini | non | non | spawn via pool cobblelore minimal |
+| `sun_flute` | solgaleo | non | non | spawn via pool cobblelore minimal |
+| `moon_flute` | lunala | non | non | spawn via pool cobblelore minimal |
+| `eclipse_core` | necrozma | non | non | spawn via pool cobblelore minimal |
+| `rusted_sword` | zacian | non | oui | spawn via pool cobblelore minimal |
+| `rusted_shield` | zamazenta | non | oui | spawn via pool cobblelore minimal |
+| `dynamax_core` | eternatus | non | non | spawn via pool cobblelore minimal |
+| `mystical_branch` | calyrex | non | non | spawn via pool cobblelore minimal |
+| `iceroot_carrot` | glastrier | non | oui | spawn via pool cobblelore minimal |
+| `shaderoot_carrot` | spectrier | non | oui | spawn via pool cobblelore minimal |
+| `violet_book` | miraidon | non | non | spawn via pool cobblelore minimal |
+| `scarlet_book` | koraidon | non | non | spawn via pool cobblelore minimal |
 | `toxic_scarf` | okidogi | non | non | spawn via pool cobblelore minimal |
 | `toxic_headband` | munkidori | non | non | spawn via pool cobblelore minimal |
-| `toxic_ribbon` | fezandipiti | non | non | spawn via pool cobblelore minimal |
-| `stellar_tera_core` | terapagos | oui | non | M&L biome spawn — pas de pedestal LM |
-| `psychic_orb` | latias | oui | oui |  |
-| `combat_orb` | latios | oui | oui |  |
-| `dark_orb` | darkrai | oui | non | M&L biome spawn — pas de pedestal LM |
+| `toxic_riboon` | fezandipiti | non | non | spawn via pool cobblelore minimal |
+| `teal_mask` | ogerpon | non | non | spawn via pool cobblelore minimal |
+| `stellar_tera_core` | terapagos | non | non | spawn via pool cobblelore minimal |
+| `psychic_orb` | articuno | non | non | spawn via pool cobblelore minimal |
+| `combat_orb` | zapdos | non | non | spawn via pool cobblelore minimal |
+| `dark_orb` | moltres | non | non | spawn via pool cobblelore minimal |
 | `ruinous_sword` | chienpao | non | non | spawn via pool cobblelore minimal |
-| `ruinous_beads` | chiiyu | non | non | spawn via pool cobblelore minimal |
+| `ruinous_beads` | chiyu | non | non | spawn via pool cobblelore minimal |
 | `ruinous_tablet` | wochien | non | non | spawn via pool cobblelore minimal |
 | `ruinous_vessel` | tinglu | non | non | spawn via pool cobblelore minimal |
-| `zeraora_tuft` | zeraora | oui | non | M&L biome spawn — pas de pedestal LM |
-| `cosmic_core` | cosmog | oui | non | M&L biome spawn — pas de pedestal LM |
-| `cosmic_flute` | cosmoem | non | non | spawn via pool cobblelore minimal |
-| `odd_sea_egg` | mew | oui | oui |  |
-| `rks_communicator` | silvally | non | non | spawn via pool cobblelore minimal |
-| `scroll_of_challenge` | kubfu | oui | non | M&L biome spawn — pas de pedestal LM |
-| `teal_mask` | ogerpon | oui | non | M&L biome spawn — pas de pedestal LM |
-| `wellspring_mask` | ogerpon | oui | non | masque Ogerpon — même espèce, pas de pedestal séparé LM; M&L biome spawn — pas de pedestal LM |
-| `hearthflame_mask` | ogerpon | oui | non | masque Ogerpon — même espèce, pas de pedestal séparé LM; M&L biome spawn — pas de pedestal LM |
-| `cornerstone_mask` | ogerpon | oui | non | masque Ogerpon — même espèce, pas de pedestal séparé LM; M&L biome spawn — pas de pedestal LM |
+| `zeraora_tuft` | zeraora | non | non | spawn via pool cobblelore minimal |
+| `cosmic_flute` | cosmog | non | non | spawn via pool cobblelore minimal |
+| `star_flute` | cosmoem | non | non | spawn via pool cobblelore minimal |
+| `odd_sea_egg` | phione | non | non | spawn via pool cobblelore minimal |
+| `rks_communicator` | typenull | non | non | spawn via pool cobblelore minimal |
+| `scroll_of_challenge` | kubfu | non | non | spawn via pool cobblelore minimal |
 
-## Espèces sans pedestal Legendary Monuments
+## Esp�ces sans pedestal Legendary Monuments
 
-Total espèces distinctes : 86.
+Total esp�ces distinctes : 92.
 Avec pedestal LM (~20) : 20.
 
-Pour le gameplay **structure + pedestal**, seules les espèces avec pedestal LM (ou config custom) fonctionnent sans autre mécanique LM (urnes, clés golem, etc.).
+Pour le gameplay **structure + pedestal**, seules les esp�ces avec pedestal LM (ou config custom) fonctionnent sans autre m�canique LM (urnes, cl�s golem, etc.).
 

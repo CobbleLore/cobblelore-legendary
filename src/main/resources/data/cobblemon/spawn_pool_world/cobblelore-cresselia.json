@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-cresselia-1",
+      "id": "cobblelore-cresselia-lunar_feather",
       "pokemon": "cresselia",
       "presets": [
         "natural"
@@ -15,14 +15,6 @@
       "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "minecraft:mushroom_fields",
-          "minecraft:mushroom_field_shore",
-          "minecraft:snowy_tundra"
-        ],
-        "moonPhase": 1,
-        "canSeeSky": true,
-        "timeRange": "night",
         "key_item": "cobblelore:lunar_feather"
       }
     }

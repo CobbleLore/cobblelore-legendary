@@ -4,48 +4,17 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-shaymin-1",
+      "id": "cobblelore-shaymin-gracidea",
       "pokemon": "shaymin",
       "presets": [
-        "flowers"
+        "natural"
       ],
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "70",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "minecraft:sunflower_plains",
-          "minecraft:flower_forest",
-          "minecraft:flower_forest",
-          "minecraft:meadow",
-          "terralith:blooming_plateau",
-          "terralith:blooming_valley",
-          "terralith:lavender_valley",
-          "terralith:sakura_grove",
-          "terralith:sakura_valley",
-          "#cobblemon:is_floral",
-          "#cobblemon:is_grassland"
-        ],
-        "key_item": "cobblelore:gracidea"
-      }
-    },
-    {
-      "id": "mythsandlegends-shaymin-2",
-      "pokemon": "shaymin",
-      "presets": [
-        "flowers"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "70",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#cobblemon:is_lush"
-        ],
         "key_item": "cobblelore:gracidea"
       }
     }

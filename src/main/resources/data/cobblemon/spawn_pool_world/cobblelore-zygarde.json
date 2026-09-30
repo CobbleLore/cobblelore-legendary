@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "cobblelore-zygarde-0",
+      "id": "cobblelore-zygarde-zygarde_cube",
       "pokemon": "zygarde",
       "presets": [
         "natural"

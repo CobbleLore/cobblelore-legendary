@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-regidrago-1",
+      "id": "cobblelore-regidrago-dragon_skull",
       "pokemon": "regidrago",
       "presets": [
         "natural"
@@ -12,78 +12,9 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "40",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "#minecraft:is_nether"
-        ],
-        "key_item": "cobblelore:dragon_skull"
-      }
-    },
-    {
-      "id": "mythsandlegends-regidrago-2",
-      "pokemon": "regidrago",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "40",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "minecraft:the_end",
-          "minecraft:end_barrens",
-          "minecraft:end_highlands",
-          "minecraft:end_midlands",
-          "minecraft:small_end_islands"
-        ],
-        "key_item": "cobblelore:dragon_skull"
-      }
-    },
-    {
-      "id": "mythsandlegends-regidrago-3",
-      "pokemon": "regidrago",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "40",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "minecraft:the_end",
-          "minecraft:end_barrens",
-          "minecraft:end_highlands",
-          "minecraft:end_midlands",
-          "minecraft:small_end_islands"
-        ],
-        "key_item": "cobblelore:dragon_skull"
-      }
-    },
-    {
-      "id": "mythsandlegends-regidrago-4",
-      "pokemon": "regidrago",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "40",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "minecraft:the_end",
-          "minecraft:end_barrens",
-          "minecraft:end_highlands",
-          "minecraft:end_midlands",
-          "minecraft:small_end_islands"
-        ],
         "key_item": "cobblelore:dragon_skull"
       }
     }

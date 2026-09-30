@@ -2,12 +2,15 @@
 
 Mod Fabric **1.21.1** : items légendaires `cobblelore:*` (catalogue Delta/Academy), intégration **Myths and Legends** (key items + spawn pools) et doc/config pour **Legendary Monuments** (pedestals).
 
+**Périmètre :** légendaires + mythiques Cobblemon — **pas d’Ultra Beasts**.
+
 ## Stack serveur / client
 
 - Cobblemon
 - Myths and Legends (+ datapack officiel recommandé)
+- **Complete Cobblemon Collection — M&L compat** (`complete-cobblemon-collection-myths-and-legends-compat` **2.21** on Modrinth) — models/textures (e.g. Galar birds); **no** natural legendary spawns
 - Legendary Monuments
-- **cobblelore-legendary** (client + serveur)
+- **cobblelore-legendary** (client + serveur) — key items, spawn pools, LM pedestal mapping
 
 ## Build
 
@@ -38,7 +41,9 @@ Tableau des gaps : [`docs/GAPS-LEGENDARY-MONUMENTS.md`](docs/GAPS-LEGENDARY-MONU
 
 ## Assets
 
-Textures dérivées du pack Delta Client (usage serveur CobbleLore — vérifier droits avant distribution publique). Régénération :
+Legendary **item** textures come from Delta Client where applicable (verify rights before public distribution). **Pokémon models** for missing vanilla forms (Galar birds, etc.) come from **CCC M&L compat** in the CobbleLore pack — not from this mod.
+
+Regenerate item textures and spawn pools:
 
 ```bash
 python3 scripts/generate_legendary_assets.py

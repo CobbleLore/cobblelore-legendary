@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "cobblelore-enamorus-0",
+      "id": "cobblelore-enamorus-enamorus_bottle",
       "pokemon": "enamorus",
       "presets": [
         "natural"

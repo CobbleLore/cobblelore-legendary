@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-moltres-1",
+      "id": "cobblelore-moltres-flare_orb",
       "pokemon": "moltres",
       "presets": [
         "natural"
@@ -12,48 +12,25 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "50-60",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "minecraft:badlands",
-          "minecraft:windswept_hills"
-        ],
-        "key_item": "cobblelore:flare_orb",
-        "item_requirement": [
-          {
-            "id": "cobblemon:fire_stone",
-            "count": 3,
-            "consume": true
-          }
-        ]
+        "key_item": "cobblelore:flare_orb"
       }
     },
     {
-      "id": "mythsandlegends-moltres-2",
-      "pokemon": "moltres",
+      "id": "cobblelore-moltres-dark_orb",
+      "pokemon": "moltres galarian",
       "presets": [
         "natural"
       ],
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "50-60",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "#cobblemon:is_volcanic",
-          "#cobblemon:is_thermal",
-          "#cobblemon:is_sky"
-        ],
-        "key_item": "cobblelore:flare_orb",
-        "item_requirement": [
-          {
-            "id": "cobblemon:fire_stone",
-            "count": 3,
-            "consume": true
-          }
-        ]
+        "key_item": "cobblelore:dark_orb"
       }
     }
   ]

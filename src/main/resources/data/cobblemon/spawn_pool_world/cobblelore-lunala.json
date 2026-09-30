@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-lunala-1",
+      "id": "cobblelore-lunala-moon_flute",
       "pokemon": "lunala",
       "presets": [
         "natural"
@@ -12,16 +12,10 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "70-80",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "minecraft:dark_forest",
-          "byg:warped_desert",
-          "#cobblemon:is_hills"
-        ],
-        "timeRange": "night",
-        "key_item": "cobblelore:lunar_core"
+        "key_item": "cobblelore:moon_flute"
       }
     }
   ]

@@ -1,5 +1,6 @@
 package com.cobblelore.legendary;
 
+import com.cobblelore.legendary.legendarymonuments.PedestalConfigOverrides;
 import com.cobblelore.legendary.registry.ModItemGroups;
 import com.cobblelore.legendary.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -14,6 +15,7 @@ public final class CobbleLoreLegendaryMod implements ModInitializer {
     public void onInitialize() {
         ModItems.register();
         ModItemGroups.register();
+        PedestalConfigOverrides.apply();
         LOGGER.info("Registered {} legendary key items", ModItems.all().size());
     }
 }

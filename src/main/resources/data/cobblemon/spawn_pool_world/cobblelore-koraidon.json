@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-koraidon-1",
+      "id": "cobblelore-koraidon-scarlet_book",
       "pokemon": "koraidon",
       "presets": [
         "natural"
@@ -12,36 +12,10 @@
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "68-72",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "minecraft:badlands",
-          "minecraft:eroded_badlands",
-          "minecraft:savanna",
-          "minecraft:savanna_plateau"
-        ],
-        "key_item": "cobblelore:koraidon_key"
-      }
-    },
-    {
-      "id": "mythsandlegends-koraidon-2",
-      "pokemon": "koraidon",
-      "presets": [
-        "natural"
-      ],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "68-.72",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#cobblemon:is_savanna",
-          "#cobblemon:is_plateau",
-          "#cobblemon:is_mountain"
-        ],
-        "key_item": "cobblelore:koraidon_key"
+        "key_item": "cobblelore:scarlet_book"
       }
     }
   ]

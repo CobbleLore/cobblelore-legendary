@@ -4,7 +4,7 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "cobblelore-fezandipiti-0",
+      "id": "cobblelore-fezandipiti-toxic_riboon",
       "pokemon": "fezandipiti",
       "presets": [
         "natural"
@@ -15,7 +15,7 @@
       "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "key_item": "cobblelore:toxic_ribbon"
+        "key_item": "cobblelore:toxic_riboon"
       }
     }
   ]

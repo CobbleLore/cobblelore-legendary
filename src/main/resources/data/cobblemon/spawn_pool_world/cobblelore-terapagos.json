@@ -4,40 +4,17 @@
   "neededUninstalledMods": [],
   "spawns": [
     {
-      "id": "mythsandlegends-terapagos-1",
+      "id": "cobblelore-terapagos-stellar_tera_core",
       "pokemon": "terapagos",
-      "presets": [],
+      "presets": [
+        "natural"
+      ],
       "type": "pokemon",
       "context": "grounded",
       "bucket": "ultra-rare",
-      "level": "75",
+      "level": "50-70",
       "weight": 0.1,
       "condition": {
-        "biomes": [
-          "#cobblemon:is_mountain",
-          "#cobblemon:is_magical",
-          "#cobblemon:is_river",
-          "#cobblemon:is_jungle"
-        ],
-        "key_item": "cobblelore:stellar_tera_core"
-      }
-    },
-    {
-      "id": "mythsandlegends-terapagos-2",
-      "pokemon": "terapagos",
-      "presets": [],
-      "type": "pokemon",
-      "context": "grounded",
-      "bucket": "ultra-rare",
-      "level": "75",
-      "weight": 0.1,
-      "condition": {
-        "biomes": [
-          "#cobblemon:is_mountain",
-          "#cobblemon:is_magical",
-          "#cobblemon:is_river",
-          "#cobblemon:is_jungle"
-        ],
         "key_item": "cobblelore:stellar_tera_core"
       }
     }
